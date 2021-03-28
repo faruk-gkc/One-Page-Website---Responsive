@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.7; }
+
+ul, li, ol {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+.Header {
+  background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)), url("../images/header.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  /* clip-path: polygon(x y, x y, x y, x y); */
+  /* clip-path: polygon(5% 5%, 90% 0%, 100% 80% , 0% 100%); */ }
+  .Header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 70px; }
+    .Header-top-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .Header-top-logo-a {
+        background-color: rgba(8, 189, 230, 0.57);
+        box-shadow: 0 5px 0 #0077ff;
+        color: white;
+        padding: 1em 1.5em;
+        position: relative;
+        border-radius: .2em;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: all 1s;
+        letter-spacing: .1em;
+        font-size: 1.2em; }
+        .Header-top-logo-a:hover {
+          background-color: #0077ff; }
+        .Header-top-logo-a:active {
+          box-shadow: none;
+          top: 5px; }
+    .Header-top-menu li {
+      display: inline-block; }
+      .Header-top-menu li a {
+        color: #fff;
+        display: block;
+        padding: 15px 20px;
+        text-align: center;
+        letter-spacing: .1rem;
+        position: relative;
+        font-size: 1em;
+        transition: all .5s; }
+        .Header-top-menu li a:hover {
+          color: rgba(156, 176, 156, 0.8); }
+          .Header-top-menu li a:hover::after {
+            width: 100%;
+            right: 0; }
+        .Header-top-menu li a::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background-color: aliceblue;
+          transition: all .5s; }
+  .Header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .Header-content-heading {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .Header-content-heading h1 {
+        color: #fff;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 300;
+        letter-spacing: .1em;
+        margin-top: 1.6em;
+        font-size: 3em; }
+      .Header-content-heading p {
+        color: #fff;
+        text-align: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 300;
+        letter-spacing: .1em;
+        margin-top: 1.6em;
+        font-size: 1.6em;
+        margin-top: 1em; }
+      .Header-content-heading a {
+        background-color: transparent;
+        /* Green */
+        border: 2px solid rgba(156, 176, 156, 0.8);
+        color: #fff;
+        padding: 15px 20px;
+        text-align: center;
+        display: inline-block;
+        font-size: 1em;
+        margin: 1.67em .5em;
+        transition: all 0.5s;
+        cursor: pointer;
+        border-radius: 2em;
+        letter-spacing: .1em;
+        backface-visibility: hidden; }
+        .Header-content-heading a:hover {
+          background-color: rgba(156, 176, 156, 0.8);
+          transform: translateY(-3px);
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4); }
+        .Header-content-heading a:active {
+          transform: translateY(-1px);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4); }
+
+/* KEYFRAMES START */
+.left-ani {
+  animation: left-ani 1000ms; }
+
+.right-ani {
+  animation: right-ani 1000ms; }
+
+@keyframes left-ani {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0; }
+  50% {
+    transform: translateX(100px);
+    opacity: 0.5; }
+  75% {
+    transform: translateX(-20px);
+    opacity: 0.7; }
+  100% {
+    transform: translateX(0px);
+    opacity: 1; } }
+
+@keyframes right-ani {
+  0% {
+    transform: translateX(100px);
+    opacity: 0; }
+  50% {
+    transform: translateX(-100px);
+    opacity: 0.5; }
+  75% {
+    transform: translateX(20px);
+    opacity: 0.7; }
+  100% {
+    transform: translateX(0px);
+    opacity: 1; } }
+
+/* KEYFRAMES END */
+@media (max-width: 860px) {
+  .Header-top {
+    flex-direction: column;
+    justify-content: center; }
+    .Header-top-logo {
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 1.2em; }
+      .Header-top-logo-a {
+        background-color: rgba(8, 189, 230, 0.57);
+        text-align: center;
+        display: block;
+        width: 100%;
+        color: #fff;
+        padding: .6em;
+        transition: background-color .5s; } }
+
+@media (max-width: 768px) {
+  .Header-top {
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px; }
+    .Header-top-logo {
+      justify-content: center;
+      width: 100%; }
+      .Header-top-logo-a {
+        background-color: rgba(8, 189, 230, 0.57);
+        text-align: center;
+        display: block;
+        width: 100%;
+        color: #fff;
+        padding: .6em;
+        transition: background-color .5s; }
+        .Header-top-logo-a:hover {
+          background-color: rgba(110, 119, 255, 0.6); }
+    .Header-top-menu li {
+      margin-top: 2em; }
+      .Header-top-menu li a {
+        width: 100%;
+        padding: .8em 1em;
+        font-size: .9em; }
+  .Header-content-heading {
+    margin-top: 2em; }
+    .Header-content-heading h1 {
+      margin-top: 1em;
+      font-size: 2.4em; }
+    .Header-content-heading p {
+      margin-top: 1.2em;
+      font-size: 1.2em; }
+    .Header-content-heading a {
+      border: 2px solid rgba(240, 146, 56, 0.8);
+      padding: .8em 1em;
+      font-size: .9em;
+      margin: 2em .5em; }
+      .Header-content-heading a:hover {
+        background-color: rgba(240, 146, 56, 0.8); } }
+
+@media (max-width: 576px) {
+  .Header-top {
+    padding: 1em; }
+    .Header-top-logo-a {
+      background-color: rgba(240, 146, 56, 0.6);
+      box-shadow: 0 5px 0 #c8c8c8;
+      padding: .1em; }
+      .Header-top-logo-a:hover {
+        background-color: rgba(250, 156, 56, 0.8); }
+    .Header-top-menu li {
+      margin-top: 2em; }
+      .Header-top-menu li a {
+        width: 100%;
+        padding: .1em .3em;
+        font-size: .8em;
+        letter-spacing: 0; }
+  .Header-content {
+    margin-top: 4em; } }

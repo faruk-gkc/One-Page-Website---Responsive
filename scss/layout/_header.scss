@@ -1,0 +1,136 @@
+// /* HEADER START */
+
+.Header{
+    background:  linear-gradient(to right bottom,
+    rgba(0,0,0,.2), 
+    rgba(0,0,0,.8)),
+    url("../images/header.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    /* clip-path: polygon(x y, x y, x y, x y); */
+    /* clip-path: polygon(5% 5%, 90% 0%, 100% 80% , 0% 100%); */
+    &-top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 70px;
+
+        &-logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &-a{
+                background-color: rgba(8, 189, 230, 0.57);
+                box-shadow: 0 5px 0 rgb(0, 119, 255);
+                color: white;
+                padding: 1em 1.5em;
+                position: relative;
+                border-radius: .2em;
+                text-decoration: none;
+                text-transform: uppercase;
+                transition: all 1s;
+                letter-spacing: .1em;
+                font-size: 1.2em;
+                &:hover{
+                    background-color: rgb(0, 119, 255);
+                }
+                &:active{
+                    box-shadow: none;
+                    top: 5px;
+                }
+            }
+
+
+        }
+        &-menu li{
+            display: inline-block;
+            a{
+                color: #fff;
+                display: block;
+                padding: 15px 20px;
+                text-align: center;
+                letter-spacing: .1rem;
+                position:relative;
+                font-size: 1em;
+                transition: all .5s;
+                &:hover{
+                    color: rgba(156,176,156,.8);
+                    &::after{
+                        width: 100%;
+                        right: 0;
+                    }
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    background-color:aliceblue;
+                    transition:all .5s;
+                }
+
+            }
+        }
+    }
+    &-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &-heading{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h1{
+                color: #fff;
+                text-align: center;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-weight: 300;
+                letter-spacing: .1em;
+                margin-top: 1.6em;
+                font-size: 3em;
+            }
+            p{
+                color: #fff;
+                text-align: center;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-weight: 300;
+                letter-spacing: .1em;
+                margin-top: 1.6em;
+                font-size: 1.6em;
+                margin-top: 1em;
+            }
+            a{
+                background-color: transparent; /* Green */
+                border: 2px solid rgba(156,176,156,.8);
+                color: #fff;
+                padding: 15px 20px;
+                text-align: center;
+                display: inline-block;
+                font-size: 1em;
+                margin: 1.67em .5em ;
+                transition: all 0.5s;
+                cursor: pointer;
+                border-radius: 2em;
+                letter-spacing: .1em;
+                backface-visibility: hidden;
+                &:hover{
+                    background-color: rgba(156,176,156,.8);
+                    transform: translateY(-3px);
+                    box-shadow: 0px 10px 20px rgba(0,0,0,.4)
+                }
+                &:active{
+                    transform: translateY(-1px);
+                    box-shadow: 0px 5px 10px rgba(0,0,0,.4)
+                }
+            }
+        }
+    }
+}
+

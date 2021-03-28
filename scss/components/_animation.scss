@@ -1,0 +1,50 @@
+/* KEYFRAMES START */
+
+.left-ani{
+    animation: left-ani 1000ms;
+}
+.right-ani{
+    animation: right-ani 1000ms;
+}
+
+@keyframes left-ani{
+    0%{
+       transform: translateX(-100px);
+       opacity: 0; 
+    }
+    50%{
+        transform: translateX(100px);
+        opacity: 0.5; 
+    } 
+    75%{
+        transform: translateX(-20px);
+        opacity: 0.7; 
+    } 
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    } 
+}
+@keyframes right-ani{
+    0%{
+       transform: translateX(100px);
+       opacity: 0; 
+    }
+    50%{
+        transform: translateX(-100px);
+        opacity: 0.5; 
+    } 
+    75%{
+        transform: translateX(20px);
+        opacity: 0.7; 
+    } 
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    } 
+}
+
+
+
+
+/* KEYFRAMES END */
