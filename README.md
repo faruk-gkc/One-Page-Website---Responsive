@@ -1,13 +1,6 @@
 # One Page Website - Responsive
- One-Page-Website-for-Sass
-.
-.
-.
-.
-.
-.
-.
-.
-<strong>npm install</strong>
+<br><br><br><br><br><br>
 
-Get Started..
+<h2>npm install for Terminal</h2>
+<br><br>
+<strong> Get Started.. </strong>
